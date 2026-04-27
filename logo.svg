@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 420" role="img" aria-labelledby="title desc">
+  <title id="title">Blue Z logo</title>
+  <desc id="desc">A metallic blue letter Z with sweeping arcs above and below.</desc>
+  <defs>
+    <linearGradient id="metal-body" x1="15%" y1="10%" x2="85%" y2="90%">
+      <stop offset="0%" stop-color="#b4e3ff"/>
+      <stop offset="18%" stop-color="#5ca6ea"/>
+      <stop offset="52%" stop-color="#154c95"/>
+      <stop offset="100%" stop-color="#071a44"/>
+    </linearGradient>
+    <linearGradient id="metal-edge" x1="0%" y1="20%" x2="100%" y2="70%">
+      <stop offset="0%" stop-color="#dff4ff"/>
+      <stop offset="35%" stop-color="#8dd0ff"/>
+      <stop offset="100%" stop-color="#12386e"/>
+    </linearGradient>
+    <linearGradient id="metal-sheen" x1="10%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="130%" height="140%">
+      <feDropShadow dx="0" dy="18" stdDeviation="16" flood-color="#031124" flood-opacity="0.32"/>
+    </filter>
+  </defs>
+
+  <g filter="url(#shadow)">
+    <path
+      d="M142 147H504L453 186H298L180 315H548L510 350H102L396 186H92L142 147Z"
+      fill="url(#metal-body)"
+      stroke="#08214c"
+      stroke-width="10"
+      stroke-linejoin="round"
+    />
+    <path
+      d="M298 163H486L466 178H316L226 300H522L506 314H259L435 178H113L135 163H389"
+      fill="none"
+      stroke="url(#metal-edge)"
+      stroke-width="8"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      opacity="0.9"
+    />
+    <path
+      d="M279 53C397 18 518 33 584 92C620 125 624 181 592 236C578 260 559 285 537 307"
+      fill="none"
+      stroke="url(#metal-body)"
+      stroke-width="28"
+      stroke-linecap="round"
+    />
+    <path
+      d="M278 54C394 28 506 41 570 96"
+      fill="none"
+      stroke="url(#metal-edge)"
+      stroke-width="7"
+      stroke-linecap="round"
+      opacity="0.85"
+    />
+    <path
+      d="M91 246C63 329 109 388 210 394C323 401 431 384 578 338"
+      fill="none"
+      stroke="url(#metal-body)"
+      stroke-width="28"
+      stroke-linecap="round"
+    />
+    <path
+      d="M98 251C123 335 204 364 335 365C424 365 500 357 565 342"
+      fill="none"
+      stroke="url(#metal-edge)"
+      stroke-width="7"
+      stroke-linecap="round"
+      opacity="0.85"
+    />
+    <path
+      d="M176 315L504 163"
+      fill="none"
+      stroke="#7ec4ff"
+      stroke-width="7"
+      stroke-linecap="round"
+      opacity="0.65"
+    />
+    <path
+      d="M152 150H495"
+      fill="none"
+      stroke="url(#metal-sheen)"
+      stroke-width="6"
+      stroke-linecap="round"
+      opacity="0.85"
+    />
+  </g>
+</svg>
