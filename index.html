@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>HD Image Preview</title>
+  <link rel="preload" as="image" href="./moodboard-preview.jpg">
   <style>
     :root {
       --bg: #0a0806;
@@ -105,14 +106,18 @@
       <a
         class="image-download"
         id="imageDownloadButton"
-        href="#"
+        href="./Beige Aesthetics Photo Collage Moodboard.png"
         download="Beige Aesthetics Photo Collage Moodboard HD.png"
         aria-label="Download HD image"
       >
         <img
           id="previewImage"
-          src=""
+          src="./moodboard-preview.jpg"
           alt="Beige Aesthetics Photo Collage Moodboard"
+          width="1600"
+          height="1280"
+          decoding="async"
+          fetchpriority="high"
         >
       </a>
     </section>
@@ -121,53 +126,10 @@
       <a
         class="download"
         id="downloadButton"
-        href="#"
+        href="./Beige Aesthetics Photo Collage Moodboard.png"
         download="Beige Aesthetics Photo Collage Moodboard HD.png"
       >Download HD Image</a>
     </div>
   </main>
-  <script src="./image-data.js"></script>
-  <script>
-    (function () {
-      const image = document.getElementById("previewImage");
-      const imageDownloadButton = document.getElementById("imageDownloadButton");
-      const downloadButton = document.getElementById("downloadButton");
-      const base64 = window.HD_IMAGE_BASE64 || "";
-
-      function base64ToBlob(base64Text, mimeType) {
-        const chunks = [];
-        const chunkSize = 32768;
-
-        for (let index = 0; index < base64Text.length; index += chunkSize) {
-          const slice = base64Text.slice(index, index + chunkSize);
-          const binary = window.atob(slice);
-          const bytes = new Uint8Array(binary.length);
-
-          for (let offset = 0; offset < binary.length; offset += 1) {
-            bytes[offset] = binary.charCodeAt(offset);
-          }
-
-          chunks.push(bytes);
-        }
-
-        return new Blob(chunks, { type: mimeType });
-      }
-
-      if (!base64) {
-        return;
-      }
-
-      const blob = base64ToBlob(base64, "image/png");
-      const objectUrl = URL.createObjectURL(blob);
-
-      image.src = objectUrl;
-      imageDownloadButton.href = objectUrl;
-      downloadButton.href = objectUrl;
-
-      window.addEventListener("beforeunload", function () {
-        URL.revokeObjectURL(objectUrl);
-      });
-    }());
-  </script>
 </body>
 </html>
